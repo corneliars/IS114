@@ -1,0 +1,37 @@
+red=rectangle(60, 60, "solid", "fire-brick")
+white1=rectangle(10, 60, "solid", "white")
+TOP1=beside(red,white1)
+
+blue=rectangle(20, 60, "solid", "dark-blue")
+TOP2=beside(TOP1,blue)
+
+white2=rectangle(10, 60, "solid", "white")
+red2=rectangle(120, 60, "solid", "fire-brick")
+TOP3=beside(white2,red2)
+
+TOP=beside(TOP2,TOP3)
+BOTTOM=flip-vertical(TOP)
+
+w1=rectangle(70, 10, "solid", "white")
+b1=rectangle(70, 20, "solid", "dark-blue")
+w2=rectangle(70, 10, "solid", "white")
+
+b2=rectangle(20, 40, "solid", "dark-blue")
+
+mid1=above-align("center", w1, b1)
+mid2=above-align("center", mid1, w2)
+
+mid3=beside(mid2,b2)
+
+w3=rectangle(130, 10, "solid", "white")
+b3=rectangle(130, 20, "solid", "dark-blue")
+w4=rectangle(130, 10, "solid", "white")
+
+mid4=above-align("center", w3, b3)
+mid5=above-align("center", mid4, w4)
+
+MIDDLE=beside(mid3,mid5)
+
+FLAG1=above-align("center", TOP, MIDDLE)
+FLAG=above-align("center", FLAG1, BOTTOM)
+FLAG
