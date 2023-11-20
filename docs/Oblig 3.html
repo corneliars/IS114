@@ -1,0 +1,59 @@
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Oppgave 3</title>
+</head>
+<body>
+    <canvas id="canvas" width="350" height="200"></canvas>
+    <p id="output"></p>
+    <script>
+        const canvas = document.getElementById("canvas");
+    const ctx = canvas.getContext("2d");
+
+    // funksjon for rektangel
+    rectangle = function(height, width, x, y, mode, color) {
+      ctx.fillStyle = color, mode;
+      ctx.fillRect(x, y, width, height);
+    }
+    //funksjon for sirkel
+    circle = function(radius, mode, color, x, y) {
+      ctx.fillStyle = color;
+      ctx.beginPath();
+      ctx.arc(x, y, radius, 0, Math.PI * 2, true); // Outer circle
+      if (mode == "solid") {
+        ctx.fill();
+      } else {
+        ctx.stroke();
+      }
+    }
+    //bakgrunn
+    rectangle(200, 350, 1, 1, "solid", "rgb(0, 153, 0)")
+    rectangle(150, 350, 1, 1, "solid", "rgb(62, 153, 255)")
+    //hus
+    rectangle(60, 50, 110, 100, "solid", "rgb(255, 0, 0)")
+    //dør
+    rectangle(15, 10, 140, 145, "solid", "rgb(0, 0, 0)")
+    //vindu
+    rectangle(15, 10, 140, 115, "solid", "rgb(255, 255, 255)")
+    rectangle(15, 10, 120, 115, "solid", "rgb(255, 255, 255)")
+    //pipe
+    rectangle(5, 10, 140, 95, "solid", "rgb(0, 0, 0)")
+
+    //sol
+    circle(30,"solid", "rgb(255, 242, 62)", 315, 35)
+    //sky
+    circle(25,"solid", "rgb(255, 255, 255)", 40, 45)
+    circle(25,"solid", "rgb(255, 255, 255)", 60, 45)
+    circle(25,"solid", "rgb(255, 255, 255)", 50, 35)
+
+
+    
+
+  </script>
+    
+   
+</body>
+</html> 
