@@ -10,50 +10,76 @@
     <canvas id="canvas" width="350" height="200"></canvas>
     <p id="output"></p>
     <script>
-        const canvas = document.getElementById("canvas");
-    const ctx = canvas.getContext("2d");
+      const canvas = document.getElementById("canvas");
+      const ctx = canvas.getContext("2d");
 
-    // funksjon for rektangel
-    rectangle = function(height, width, x, y, mode, color) {
-      ctx.fillStyle = color, mode;
-      ctx.fillRect(x, y, width, height);
-    }
-    //funksjon for sirkel
-    circle = function(radius, mode, color, x, y) {
-      ctx.fillStyle = color;
-      ctx.beginPath();
-      ctx.arc(x, y, radius, 0, Math.PI * 2, true); // Outer circle
-      if (mode == "solid") {
-        ctx.fill();
-      } else {
-        ctx.stroke();
+      // funksjon for rektangel
+      rectangle = function(height, width, x, y, mode, color) {
+        ctx.fillStyle = color, mode;
+        ctx.fillRect(x, y, width, height);
       }
-    }
-    //bakgrunn
-    rectangle(200, 350, 1, 1, "solid", "rgb(0, 153, 0)")
-    rectangle(150, 350, 1, 1, "solid", "rgb(62, 153, 255)")
-    //hus
-    rectangle(60, 50, 110, 100, "solid", "rgb(255, 0, 0)")
-    //dør
-    rectangle(15, 10, 140, 145, "solid", "rgb(0, 0, 0)")
-    //vindu
-    rectangle(15, 10, 140, 115, "solid", "rgb(255, 255, 255)")
-    rectangle(15, 10, 120, 115, "solid", "rgb(255, 255, 255)")
-    //pipe
-    rectangle(5, 10, 140, 95, "solid", "rgb(0, 0, 0)")
 
-    //sol
-    circle(30,"solid", "rgb(255, 242, 62)", 315, 35)
-    //sky
-    circle(25,"solid", "rgb(255, 255, 255)", 40, 45)
-    circle(25,"solid", "rgb(255, 255, 255)", 60, 45)
-    circle(25,"solid", "rgb(255, 255, 255)", 50, 35)
+      //funksjon for sirkel
+       circle = function(radius, mode, color, x, y) {
+        ctx.fillStyle = color;
+        ctx.beginPath();
+        ctx.arc(x, y, radius, 0, Math.PI * 2, true); // Outer circle
+        if (mode == "solid") {
+          ctx.fill();
+        } else {
+          ctx.stroke();
+        }
+      }
+      
+     //gress
+     rectangle(200, 350, 1, 1, "solid", "rgb(0, 153, 0)")
+     //himmel
+      rectangle(150, 350, 1, 1, "solid", "rgb(62, 153, 255)")
+      //hus
+      rectangle(60, 50, 110, 100, "solid", "rgb(255, 0, 0)")
+     //dør
+     rectangle(15, 10, 140, 145, "solid", "rgb(0, 0, 0)")
+      //vindu
+     rectangle(15, 10, 140, 115, "solid", "rgb(255, 255, 255)")
+     rectangle(15, 10, 120, 115, "solid", "rgb(255, 255, 255)")
+      //pipe
+      rectangle(5, 10, 140, 95, "solid", "rgb(0, 0, 0)")
+
+      //sol
+      circle(30,"solid", "rgb(255, 242, 62)", 315, 35)
+      //sky
+      circle(25,"solid", "rgb(255, 255, 255)", 35, 45)
+      circle(25,"solid", "rgb(255, 255, 255)", 65, 45)
+      circle(25,"solid", "rgb(255, 255, 255)", 50, 35)
+      circle(25,"solid", "rgb(255, 255, 255)", 50, 45)
+ 
+    </script>
+
+    <svg id="svg1" height="200" width="350">
+      
+      <!-- gress -->
+      <rect width ="350" height="200" style="fill:rgb(0, 153, 0)" />
+      <!-- himmel -->
+      <rect x="1" y="1" width="350" height="150" style="fill:rgb(62, 153, 255)"/>
+      <!-- hus -->
+      <rect x="110" y="100" width="50" height="60" style="fill:rgb(255, 0, 0)"/>
+      <!-- dør -->
+     <rect x="140" y="145" width="10" height="15" style="fill:rgb(0, 0, 0)"/>
+     <!-- vindu -->
+     <rect x="140" y="115" width="10" height="15" style="fill:rgb(255, 255, 255)"/>
+     <rect x="120" y="115" width="10" height="15" style="fill:rgb(255, 255, 255)"/>
+     <!-- pipe -->
+     <rect x="140" y="95" width="10" height="5" style="fill:rgb(0, 0, 0)"/>
+
+     <!-- sol -->
+     <circle cx="315" cy="35" r="30" style="fill:rgb(255, 242, 62)"/>
+     <!-- sky -->
+     <circle cx="35" cy="45" r="25" style="fill:rgb(255, 255, 255)"/>
+     <circle cx="65" cy="45" r="25" style="fill:rgb(255, 255, 255)"/>
+     <circle cx="50" cy="35" r="25" style="fill:rgb(255, 255, 255)"/>
+     <circle cx="50" cy="45" r="25" style="fill:rgb(255, 255, 255)"/>
 
 
-    
-
-  </script>
-    
-   
-</body>
+    </svg>
+  </body>
 </html> 
