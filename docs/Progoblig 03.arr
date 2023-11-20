@@ -1,14 +1,14 @@
 use context essentials2021
 include color
-#skyer
+#sky
 overlay-xy(circle(25, "solid", color(255, 255, 255, 1)), -35, -15,
   overlay-xy(circle(25, "solid", color(255, 255, 255, 1)), -20, -25,
     overlay-xy(circle(25, "solid", color(255, 255, 255, 1)), -50, -25, 
-      #solen
+      #sol
       overlay-xy(circle(35, "solid", color(255, 242, 62, 1)), -280, 0, 
-        #pipen
+        #pipe
         overlay-xy(rectangle(10, 5, "solid", color(0, 0, 0, 1)), -130, -105,
-          #vinduer
+          #vindu
           overlay-xy(rectangle(10, 15, "solid", color(255, 255, 255, 1)), -110, -125,
             overlay-xy(rectangle(10, 15, "solid", color(255, 255, 255, 1)), -130, -125,
               #dør
